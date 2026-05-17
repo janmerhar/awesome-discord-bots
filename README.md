@@ -51,7 +51,23 @@ Automod, anti-spam, raid protection, logging, permissions, warnings, bans, repor
 
 _Related: [Utility](#utility)_
 
-- _Entries go here._
+- [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted` `Leveling` `Dashboard`
+  <details><summary>Slash commands (8)</summary>
+
+  **Moderation**
+  - `/ban <user> [reason]` — Ban a member from the server.
+  - `/kick <user> [reason]` — Kick a member from the server.
+  - `/warn <user> <reason>` — Issue a warning to a member.
+  - `/mute <user> <duration> [reason]` — Time-out a member.
+  - `/clear <amount>` — Bulk-delete recent messages.
+
+  **Leveling**
+  - `/rank [user]` — Show a member's level, XP, and server rank.
+  - `/levels` — Open the server XP leaderboard.
+  - `/give-xp <user> <amount>` — Award XP to a member (admin-only).
+
+  _Last verified: 2026-05-17 · [Full reference](https://help.mee6.xyz/)_
+  </details>
 
 ### Utility
 
@@ -157,6 +173,66 @@ Field-by-field:
 Additional descriptive tags may be appended in backticks: `Slash Commands`, `Dashboard`, `Premium`, secondary category tags such as `Utility`, etc.
 
 [Anti-feature](#anti-features) markers are prepended to the entry, e.g. `- ⚠ 📢 [Bot Name](...) - ...`.
+
+### Slash commands block
+
+Each entry may include a collapsible list of the bot's notable slash commands, placed immediately below the entry line. Use GitHub's native `<details>` / `<summary>` so the commands stay hidden by default and the section remains scannable.
+
+Shape:
+
+```markdown
+- [Bot Name](…) - Description. (…) `License` `Stack` `Hosted`
+  <details><summary>Slash commands (N)</summary>
+
+  **Sub-category**
+  - `/command <required> [optional]` — Short description.
+  - `/parent subcommand <arg>` — Short description.
+
+  **Another sub-category**
+  - `/foo` — Short description.
+
+  _Last verified: YYYY-MM-DD · [Full reference](docs-url)_
+  </details>
+```
+
+Rules:
+
+- **Scope** — list the bot's *key* commands, capped at roughly 10–15. This is a catalog, not full documentation; link to the bot's own docs for the complete reference.
+- **Notation** — `<arg>` for required options, `[arg]` for optional, matching Discord docs convention. Flatten subcommands into the slash path: `/giveaway start <duration> [winners]`, not nested entries.
+- **Grouping** — group commands under bold sub-category headings (e.g. `**Moderation**`, `**Music**`) when the bot has more than ~5 commands; a flat list is fine below that.
+- **`N` in summary** — actual count of commands listed in the block, not the bot's true total.
+- **Footer** — every block ends with `_Last verified: YYYY-MM-DD · [Full reference](…)_`. The date is the day the list was confirmed against upstream; the reference link is the bot's official command docs.
+- **Optional** — entries without a verified command list simply omit the block.
+
+Rendering gotchas (these trip up the first time):
+
+1. The `<details>` block is indented **2 spaces** so it stays inside the parent list item.
+2. There must be a **blank line after `<summary>`** and a **blank line before `</details>`**, otherwise GitHub treats the body as raw HTML and the bullets won't render.
+3. `<details>` is inline HTML — if a markdown linter is added later, allow-list the `details` and `summary` tags (markdownlint MD033).
+
+Worked example (illustrative — verify the command list against the bot's docs before using this as a real curated entry):
+
+```markdown
+- [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted`
+  <details><summary>Slash commands (8)</summary>
+
+  **Moderation**
+  - `/ban <user> [reason]` — Ban a member from the server.
+  - `/kick <user> [reason]` — Kick a member from the server.
+  - `/warn <user> <reason>` — Issue a warning to a member.
+  - `/mute <user> <duration> [reason]` — Time-out a member.
+  - `/clear <amount>` — Bulk-delete recent messages.
+
+  **Leveling**
+  - `/rank [user]` — Show a member's level, XP, and server rank.
+  - `/levels` — Open the server XP leaderboard.
+  - `/give-xp <user> <amount>` — Award XP to a member (admin-only).
+
+  _Last verified: 2026-05-17 · [Full reference](https://help.mee6.xyz/)_
+  </details>
+```
+
+Rendered, that produces an entry whose summary line shows `▶ Slash commands (8)` and expands to the grouped list when clicked.
 
 --------------------
 
