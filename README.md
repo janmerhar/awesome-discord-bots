@@ -4,7 +4,7 @@
 
 > A curated list of notable Discord bots, organized by what they help a server do.
 
-This repository is intended to become a browsable catalog, not a scrape of every bot directory. The primary taxonomy starts with top.gg's broad Discord bot categories and adds consolidated sections from recurring top.gg tags: `Fun`, `Moderation`, `Utility`, `Music`, `Economy`, `Social`, `Game`, `Meme`, `Leveling`, `Anime`, `Administration`, `AI`, `Automation`, `Crypto`, `Giveaways`, `Logging`, `Media`, `Onboarding`, `Productivity`, `Role Management`, `Security`, `Support & Tickets`, and `Temporary Voice Channels`. The shape is borrowed from [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted): each category becomes a section ("topic"), and each section holds a bulleted list of bots with a consistent metadata format.
+This repository is intended to become a browsable catalog, not a scrape of every bot directory. The primary taxonomy starts with top.gg's broad Discord bot categories and adds consolidated sections from recurring top.gg tags: `Fun`, `Moderation`, `Utility`, `Music`, `Economy`, `Social`, `Game`, `Meme`, `Leveling`, `Anime`, `Administration`, `AI`, `Automation`, `Crypto`, `Giveaways`, `Logging`, `Media`, `Onboarding`, `Productivity`, `Role Management`, `Security`, `Support & Tickets`, and `Temporary Voice Channels`. Each category becomes a section ("topic"), and each section holds a bulleted list of bots with a consistent metadata format.
 
 See [Contributing](#contributing).
 
@@ -422,7 +422,7 @@ Avoid entries that are:
 
 **[`^        back to top        ^`](#awesome-discord-bots)**
 
-SPDX short codes, mirroring the awesome-selfhosted convention. Extend as needed.
+SPDX short codes. Extend as needed.
 
 - `AGPL-3.0` - [GNU Affero General Public License 3.0](https://spdx.org/licenses/AGPL-3.0.html)
 - `Apache-2.0` - [Apache License, Version 2.0](https://spdx.org/licenses/Apache-2.0.html)
@@ -442,7 +442,7 @@ SPDX short codes, mirroring the awesome-selfhosted convention. Extend as needed.
 
 **[`^        back to top        ^`](#awesome-discord-bots)**
 
-Markers prepended to an entry to flag traits worth knowing before inviting a bot. Adapted from awesome-selfhosted's `⚠` convention, with additions specific to Discord bots.
+Markers prepended to an entry to flag traits worth knowing before inviting a bot.
 
 - `⚠` - Closed source / no public repository.
 - `$` - Core advertised features are gated behind a paid premium tier.
