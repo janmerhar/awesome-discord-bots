@@ -1,4 +1,6 @@
-# Awesome Discord Bots [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Discord Bots
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of notable Discord bots, organized by what they help a server do.
 
