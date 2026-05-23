@@ -2,7 +2,7 @@
 
 > A curated list of notable Discord bots, organized by what they help a server do.
 
-This repository is intended to become a browsable catalog, not a scrape of every bot directory. The primary taxonomy is a small, fixed set of categories — `Fun`, `Moderation`, `Utility`, `Music`, `Economy`, `Social`, `Game`, `Meme`, `Leveling`, `Anime` — covering the dominant use cases for Discord bots. The shape is borrowed from [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted): each category becomes a section ("topic"), and each section holds a bulleted list of bots with a consistent metadata format.
+This repository is intended to become a browsable catalog, not a scrape of every bot directory. The primary taxonomy starts with top.gg's broad Discord bot categories and adds consolidated sections from recurring top.gg tags: `Fun`, `Moderation`, `Utility`, `Music`, `Economy`, `Social`, `Game`, `Meme`, `Leveling`, `Anime`, `Administration`, `AI`, `Automation`, `Crypto`, `Giveaways`, `Logging`, `Media`, `Onboarding`, `Productivity`, `Role Management`, `Security`, `Support & Tickets`, and `Temporary Voice Channels`. The shape is borrowed from [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted): each category becomes a section ("topic"), and each section holds a bulleted list of bots with a consistent metadata format.
 
 See [Contributing](#contributing).
 
@@ -21,6 +21,19 @@ See [Contributing](#contributing).
   - [Meme](#meme)
   - [Leveling](#leveling)
   - [Anime](#anime)
+  - [Administration](#administration)
+  - [AI](#ai)
+  - [Automation](#automation)
+  - [Crypto](#crypto)
+  - [Giveaways](#giveaways)
+  - [Logging](#logging)
+  - [Media](#media)
+  - [Onboarding](#onboarding)
+  - [Productivity](#productivity)
+  - [Role Management](#role-management)
+  - [Security](#security)
+  - [Support & Tickets](#support--tickets)
+  - [Temporary Voice Channels](#temporary-voice-channels)
 - [Entry Format](#entry-format)
 - [Cross-Cutting Indexes](#cross-cutting-indexes)
 - [Inclusion Criteria](#inclusion-criteria)
@@ -49,7 +62,7 @@ _Related: [Meme](#meme), [Game](#game), [Social](#social)_
 
 Automod, anti-spam, raid protection, logging, permissions, warnings, bans, reports, member screening, and staff workflow bots.
 
-_Related: [Utility](#utility)_
+_Related: [Utility](#utility), [Security](#security), [Logging](#logging), [Administration](#administration)_
 
 - [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted` `Leveling` `Dashboard`
   <details><summary>Slash commands (8)</summary>
@@ -75,7 +88,7 @@ _Related: [Utility](#utility)_
 
 General server utilities: reminders, role menus, ticket systems, search, embeds, forms, polls, notifications, server stats, translators, and other "swiss army knife" bots.
 
-_Related: [Moderation](#moderation), [Social](#social)_
+_Related: [Moderation](#moderation), [Social](#social), [Automation](#automation), [Role Management](#role-management), [Support & Tickets](#support--tickets), [Productivity](#productivity)_
 
 - _Entries go here._
 
@@ -85,6 +98,8 @@ _Related: [Moderation](#moderation), [Social](#social)_
 
 Bots that play audio in voice channels — streaming from YouTube, Spotify, SoundCloud, direct URLs, or local libraries — with queueing, search, playlists, and playback controls.
 
+_Related: [Media](#media)_
+
 - _Entries go here._
 
 ### Economy
@@ -93,7 +108,7 @@ Bots that play audio in voice channels — streaming from YouTube, Spotify, Soun
 
 Virtual currency, shops, trading, rewards, gambling-style minigames, inventories, jobs, and cross-server progression systems.
 
-_Related: [Game](#game), [Leveling](#leveling)_
+_Related: [Game](#game), [Leveling](#leveling), [Crypto](#crypto)_
 
 - _Entries go here._
 
@@ -103,7 +118,7 @@ _Related: [Game](#game), [Leveling](#leveling)_
 
 Community interaction: profiles, reputation, introductions, birthdays, marriages, hugs, confessions, matchmaking, and other member-discovery features.
 
-_Related: [Fun](#fun), [Leveling](#leveling)_
+_Related: [Fun](#fun), [Leveling](#leveling), [Onboarding](#onboarding)_
 
 - _Entries go here._
 
@@ -133,7 +148,7 @@ _Related: [Fun](#fun)_
 
 XP and ranking systems that reward chat or voice activity with levels, role rewards, achievements, and leaderboards.
 
-_Related: [Economy](#economy), [Social](#social)_
+_Related: [Economy](#economy), [Social](#social), [Role Management](#role-management)_
 
 - _Entries go here._
 
@@ -143,7 +158,141 @@ _Related: [Economy](#economy), [Social](#social)_
 
 Anime, manga, and weeb-culture bots: AniList/MAL lookups, character image commands, waifu/husbando gacha, fandom, roleplay, and Japanese-media trackers.
 
-_Related: [Fun](#fun), [Game](#game)_
+_Related: [Fun](#fun), [Game](#game), [Media](#media)_
+
+- _Entries go here._
+
+### Administration
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Server setup and administration bots: configuration panels, permission workflows, channel/server management, staff utilities, announcement tooling, and management dashboards. Consolidates screenshot tags such as `Administration`, `Server Management`, `Management`, `Tools`, and `Web Dashboard`.
+
+_Related: [Utility](#utility), [Moderation](#moderation), [Role Management](#role-management)_
+
+- _Entries go here._
+
+### AI
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+AI assistant, chatbot, summarization, image generation, prompt, and LLM-powered moderation or utility bots. Consolidates screenshot tags such as `ai`, `AI Chatbot`, `Artificial Intelligence`, `Chat bot`, and `image generation`.
+
+_Related: [Utility](#utility), [Media](#media)_
+
+- _Entries go here._
+
+### Automation
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Workflow automation bots: scheduled messages, trigger/action rules, recurring tasks, cross-service integrations, no-code automations, and configurable behavior systems.
+
+_Related: [Utility](#utility), [Productivity](#productivity)_
+
+- _Entries go here._
+
+### Crypto
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Cryptocurrency and Web3 bots: price tracking, token alerts, wallet or portfolio lookups, NFT/community utilities, and market notifications.
+
+Not here: fictional server currencies, shops, and gambling economies (→ [Economy](#economy)).
+
+_Related: [Economy](#economy), [Utility](#utility)_
+
+- _Entries go here._
+
+### Giveaways
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Giveaway, raffle, contest, winner-picking, reward distribution, and timed event bots.
+
+_Related: [Economy](#economy), [Social](#social)_
+
+- _Entries go here._
+
+### Logging
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Audit and history bots: message logs, moderation logs, member join/leave logs, voice activity logs, invite tracking, transcript capture, and incident records.
+
+_Related: [Moderation](#moderation), [Security](#security), [Support & Tickets](#support--tickets)_
+
+- _Entries go here._
+
+### Media
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Media and feed bots: YouTube/Twitch/Reddit notifications, stream alerts, image search, image utilities, radio directories, Spotify metadata, and content lookup.
+
+Not here: voice-channel music playback bots (→ [Music](#music)).
+
+_Related: [Music](#music), [Utility](#utility), [AI](#ai)_
+
+- _Entries go here._
+
+### Onboarding
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Welcomer, verification, captcha, rules acceptance, starter role, join-flow, and newcomer orientation bots.
+
+_Related: [Moderation](#moderation), [Security](#security), [Role Management](#role-management)_
+
+- _Entries go here._
+
+### Productivity
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Productivity and collaboration bots: reminders, notes, calendars, tasks, project tracking, documentation helpers, meeting support, and focused work utilities.
+
+_Related: [Utility](#utility), [Automation](#automation)_
+
+- _Entries go here._
+
+### Role Management
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Role assignment and permission bots: reaction roles, button/dropdown role menus, autoroles, temporary roles, role persistence, and role-based access control.
+
+_Related: [Utility](#utility), [Leveling](#leveling), [Onboarding](#onboarding)_
+
+- _Entries go here._
+
+### Security
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Server protection bots: anti-nuke, anti-raid, anti-spam, phishing/link filtering, alt detection, account-age checks, lockdown tools, and abuse prevention.
+
+_Related: [Moderation](#moderation), [Logging](#logging), [Onboarding](#onboarding)_
+
+- _Entries go here._
+
+### Support & Tickets
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Support desk and ticket bots: private ticket channels, staff assignment, forms, transcripts, escalation, support queues, and helpdesk workflows.
+
+_Related: [Utility](#utility), [Logging](#logging), [Administration](#administration)_
+
+- _Entries go here._
+
+### Temporary Voice Channels
+
+**[`^        back to top        ^`](#awesome-discord-bots)**
+
+Dynamic voice-channel bots: temporary rooms, user-owned voice channels, channel locks, limits, renaming, voice lobbies, and cleanup automation.
+
+_Related: [Social](#social), [Utility](#utility), [Automation](#automation)_
 
 - _Entries go here._
 
