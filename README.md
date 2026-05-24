@@ -13,29 +13,32 @@ Entries include the bot's primary site, a short description, useful links such a
 
 ## Contents
 
-- [Fun](#fun)
-- [Moderation](#moderation)
-- [Utility](#utility)
-- [Music](#music)
-- [Economy](#economy)
-- [Social](#social)
-- [Game](#game)
-- [Meme](#meme)
-- [Leveling](#leveling)
-- [Anime](#anime)
-- [Administration](#administration)
-- [AI](#ai)
-- [Automation](#automation)
-- [Crypto](#crypto)
-- [Giveaways](#giveaways)
-- [Logging](#logging)
-- [Media](#media)
-- [Onboarding](#onboarding)
-- [Productivity](#productivity)
-- [Role Management](#role-management)
-- [Security](#security)
-- [Support & Tickets](#support--tickets)
-- [Temporary Voice Channels](#temporary-voice-channels)
+- [Awesome Discord Bots ](#awesome-discord-bots-)
+  - [Contents](#contents)
+  - [Fun](#fun)
+  - [Moderation](#moderation)
+  - [Utility](#utility)
+  - [Music](#music)
+  - [Economy](#economy)
+  - [Social](#social)
+  - [Game](#game)
+  - [Meme](#meme)
+  - [Leveling](#leveling)
+  - [Anime](#anime)
+  - [Administration](#administration)
+  - [AI](#ai)
+  - [Automation](#automation)
+  - [Crypto](#crypto)
+  - [Giveaways](#giveaways)
+  - [Logging](#logging)
+  - [Media](#media)
+  - [Onboarding](#onboarding)
+  - [Productivity](#productivity)
+  - [Role Management](#role-management)
+  - [Security](#security)
+  - [Support \& Tickets](#support--tickets)
+  - [Temporary Voice Channels](#temporary-voice-channels)
+  - [Contributing](#contributing)
 
 ## Fun
 
@@ -45,7 +48,25 @@ Entertainment, casual interaction, party-game, novelty, and engagement bots. Thi
 
 Automod, anti-spam, raid protection, logging, permissions, warnings, bans, reports, member screening, and staff workflow bots.
 
-- [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted` `Leveling` `Dashboard` `Premium`.
+<details>
+  <summary><a href="https://mee6.xyz/">MEE6</a> - Moderation, leveling, and welcome/role automation bot. (<a href="https://mee6.xyz/add">Invite</a>, <a href="https://help.mee6.xyz/">Docs</a>) <code>Proprietary</code> <code>Unknown</code> <code>Hosted</code> <code>Leveling</code> <code>Dashboard</code> <code>Premium</code>.</summary>
+
+Slash commands (8):
+
+**Moderation**
+
+- `/ban <user> [reason]` - Ban a member.
+- `/kick <user> [reason]` - Kick a member.
+- `/warn <user> <reason>` - Issue a warning.
+- `/mute <user> <duration> [reason]` - Time-out a member.
+- `/clear <amount>` - Bulk-delete recent messages.
+
+**Leveling**
+
+- `/rank [user]` - Show level, XP, and server rank.
+- `/levels` - Open the XP leaderboard.
+- `/give-xp <user> <amount>` - Award XP.
+  </details>
 
 ## Utility
 
