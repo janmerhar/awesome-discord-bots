@@ -48,22 +48,21 @@ Staff actions, automod, warnings, bans, reports, member screening, moderation pe
 Not here: anti-nuke, anti-raid, phishing, and abuse-prevention tools belong in `Security`; audit trails and transcript capture belong in `Logging`.
 
 - [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted` `Leveling` `Dashboard` `Premium` `Slash Commands`.
+  <!--lint disable awesome-list-item-->
   <details>
   <summary>Slash commands (8)</summary>
 
-  <ul>
-  <li><code>/ban &lt;user&gt; [reason]</code> - Ban a member.</li>
-  <li><code>/kick &lt;user&gt; [reason]</code> - Kick a member.</li>
-  <li><code>/warn &lt;user&gt; &lt;reason&gt;</code> - Issue a warning.</li>
-  <li><code>/mute &lt;user&gt; &lt;duration&gt; [reason]</code> - Time-out a member.</li>
-  <li><code>/clear &lt;amount&gt;</code> - Bulk-delete recent messages.</li>
-
-  <li><code>/rank [user]</code> - Show level, XP, and server rank.</li>
-  <li><code>/levels</code> - Open the XP leaderboard.</li>
-  <li><code>/give-xp &lt;user&gt; &lt;amount&gt;</code> - Award XP.</li>
-  </ul>
+  - `/ban <user> [reason]` - Ban a member.
+  - `/kick <user> [reason]` - Kick a member.
+  - `/warn <user> <reason>` - Issue a warning.
+  - `/mute <user> <duration> [reason]` - Time-out a member.
+  - `/clear <amount>` - Bulk-delete recent messages.
+  - `/rank [user]` - Show level, XP, and server rank.
+  - `/levels` - Open the XP leaderboard.
+  - `/give-xp <user> <amount>` - Award XP.
 
   </details>
+  <!--lint enable awesome-list-item-->
 
 ## Utility
 
