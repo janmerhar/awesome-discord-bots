@@ -2,14 +2,9 @@
 
 > A curated list of notable Discord bots, organized by what they help a server do.
 
-This repository is intended to become a browsable catalog, not a scrape of every bot directory. The taxonomy starts with top.gg's broad Discord bot categories and adds consolidated sections from recurring bot-directory tags.
+This repository is a browsable catalog, not a scrape of every bot directory. The taxonomy starts with Top.gg's broad Discord bot categories and normalizes recurring directory tags into the primary sections below. Each bot appears in one primary section; secondary capabilities are shown with inline tags.
 
-<details>
-<summary>Entry metadata</summary>
-
-Entries include the bot's primary site, a short description, useful links such as invite/docs/source/support, license, stack, hosting model, and selected tags. Slash-command summaries are optional and should stay short; full command rules and examples are kept in the contributing guide.
-
-</details>
+Entry format, category mapping, slash-command rules, and inclusion criteria live in the contributing guide.
 
 ## Contents
 
@@ -44,41 +39,49 @@ Entries include the bot's primary site, a short description, useful links such a
 
 Entertainment, casual interaction, party-game, novelty, and engagement bots. This is the catch-all category for bots that do not fit a more specific tag.
 
+Not here: dedicated meme generators belong in `Meme`, structured games belong in `Game`, and profile or relationship features belong in `Social`.
+
 ## Moderation
 
-Automod, anti-spam, raid protection, logging, permissions, warnings, bans, reports, member screening, and staff workflow bots.
+Staff actions, automod, warnings, bans, reports, member screening, moderation permissions, and staff workflow bots.
 
-<details>
-  <summary><a href="https://mee6.xyz/">MEE6</a> - Moderation, leveling, and welcome/role automation bot. (<a href="https://mee6.xyz/add">Invite</a>, <a href="https://help.mee6.xyz/">Docs</a>) <code>Proprietary</code> <code>Unknown</code> <code>Hosted</code> <code>Leveling</code> <code>Dashboard</code> <code>Premium</code>.</summary>
+Not here: anti-nuke, anti-raid, phishing, and abuse-prevention tools belong in `Security`; audit trails and transcript capture belong in `Logging`.
 
-Slash commands (8):
+- [MEE6](https://mee6.xyz/) - Moderation, leveling, and welcome/role automation bot. ([Invite](https://mee6.xyz/add), [Docs](https://help.mee6.xyz/)) `Proprietary` `Unknown` `Hosted` `Leveling` `Dashboard` `Premium` `Slash Commands`.
+  <details>
+  <summary>Slash commands (8)</summary>
 
-**Moderation**
+  <ul>
+  <li><code>/ban &lt;user&gt; [reason]</code> - Ban a member.</li>
+  <li><code>/kick &lt;user&gt; [reason]</code> - Kick a member.</li>
+  <li><code>/warn &lt;user&gt; &lt;reason&gt;</code> - Issue a warning.</li>
+  <li><code>/mute &lt;user&gt; &lt;duration&gt; [reason]</code> - Time-out a member.</li>
+  <li><code>/clear &lt;amount&gt;</code> - Bulk-delete recent messages.</li>
 
-- `/ban <user> [reason]` - Ban a member.
-- `/kick <user> [reason]` - Kick a member.
-- `/warn <user> <reason>` - Issue a warning.
-- `/mute <user> <duration> [reason]` - Time-out a member.
-- `/clear <amount>` - Bulk-delete recent messages.
+  <li><code>/rank [user]</code> - Show level, XP, and server rank.</li>
+  <li><code>/levels</code> - Open the XP leaderboard.</li>
+  <li><code>/give-xp &lt;user&gt; &lt;amount&gt;</code> - Award XP.</li>
+  </ul>
 
-**Leveling**
-
-- `/rank [user]` - Show level, XP, and server rank.
-- `/levels` - Open the XP leaderboard.
-- `/give-xp <user> <amount>` - Award XP.
   </details>
 
 ## Utility
 
 General server utilities: reminders, role menus, ticket systems, search, embeds, forms, polls, notifications, server stats, translators, and other multipurpose server helpers.
 
+Not here: bots whose primary purpose is moderation enforcement belong in `Moderation`, and ticket-focused bots belong in `Support & Tickets`.
+
 ## Music
 
 Bots that play audio in voice channels, including streams from YouTube, Spotify, SoundCloud, direct URLs, or local libraries, with queueing, search, playlists, and playback controls.
 
+Not here: content feeds, stream alerts, radio directories, or metadata lookup belong in `Media`.
+
 ## Economy
 
 Virtual currency, shops, trading, rewards, gambling-style minigames, inventories, jobs, and cross-server progression systems.
+
+Not here: real cryptocurrency, NFTs, wallets, token alerts, and market notifications belong in `Crypto`; chat-XP systems with no currency component belong in `Leveling`.
 
 ## Social
 
@@ -88,6 +91,8 @@ Community interaction: profiles, reputation, introductions, birthdays, marriages
 
 In-chat games such as chess, poker, RPG, and idle games; companion bots for external games; LFG/matchmaking; leaderboards; and game-server status integrations.
 
+Not here: lightweight novelty commands belong in `Fun`, and currency-first progression systems belong in `Economy`.
+
 ## Meme
 
 Meme generators, image macros, reaction-image libraries, joke commands, and bots whose main purpose is to be very online.
@@ -95,6 +100,8 @@ Meme generators, image macros, reaction-image libraries, joke commands, and bots
 ## Leveling
 
 XP and ranking systems that reward chat or voice activity with levels, role rewards, achievements, and leaderboards.
+
+Not here: progression tied primarily to shops, inventories, or currency belongs in `Economy`.
 
 ## Anime
 
@@ -116,7 +123,7 @@ Workflow automation bots: scheduled messages, trigger/action rules, recurring ta
 
 Cryptocurrency and Web3 bots: price tracking, token alerts, wallet or portfolio lookups, NFT/community utilities, and market notifications.
 
-Fictional server currencies, shops, and gambling economies belong in Economy.
+Not here: fictional server currencies, shops, and gambling economies belong in `Economy`.
 
 ## Giveaways
 
@@ -126,15 +133,19 @@ Giveaway, raffle, contest, winner-picking, reward distribution, and timed event 
 
 Audit and history bots: message logs, moderation logs, member join/leave logs, voice activity logs, invite tracking, transcript capture, and incident records.
 
+Not here: helpdesk workflows, staff assignment, and support queues belong in `Support & Tickets`.
+
 ## Media
 
 Media and feed bots: YouTube/Twitch/Reddit notifications, stream alerts, image search, image utilities, radio directories, Spotify metadata, and content lookup.
 
-Voice-channel music playback bots belong in Music.
+Not here: voice-channel music playback belongs in `Music`.
 
 ## Onboarding
 
 Welcomer, verification, captcha, rules acceptance, starter role, join-flow, and newcomer orientation bots.
+
+Not here: ongoing role menus, autoroles, temporary roles, and permission management belong in `Role Management`.
 
 ## Productivity
 
@@ -144,13 +155,19 @@ Productivity and collaboration bots: reminders, notes, calendars, tasks, project
 
 Role assignment and permission bots: reaction roles, button/dropdown role menus, autoroles, temporary roles, role persistence, and role-based access control.
 
+Not here: one-time join verification and newcomer flows belong in `Onboarding`.
+
 ## Security
 
 Server protection bots: anti-nuke, anti-raid, anti-spam, phishing/link filtering, alt detection, account-age checks, lockdown tools, and abuse prevention.
 
+Not here: routine staff commands, warnings, bans, and moderation case management belong in `Moderation`.
+
 ## Support & Tickets
 
 Support desk and ticket bots: private ticket channels, staff assignment, forms, transcripts, escalation, support queues, and helpdesk workflows.
+
+Not here: transcript archives and general audit trails belong in `Logging`.
 
 ## Temporary Voice Channels
 
