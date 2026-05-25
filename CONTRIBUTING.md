@@ -7,23 +7,26 @@ Thank you for helping improve this catalog. This is a curated list, not a scrape
 Each bot entry uses this shape:
 
 ```markdown
-- [Bot Name](primary-link) - One- or two-sentence description of what it does. ([Invite](invite-url), [Source Code](repo-url), [Docs](docs-url), [Support](support-server-invite)) `License` `Language/Stack` `Hosted|Self-hosted|Both`
+- [Bot Name](website-url) - One- or two-sentence description of what it does. ([Invite](invite-url), [top.gg](top-gg-url), [Docs](docs-url), [GitHub](repo-url), [Support Server](support-server-invite), [Privacy](privacy-url)) `License` `Language/Stack` `Hosted|Self-hosted|Both` `Prefix: /`
 ```
 
 Field rules:
 
-- **Bot Name** - The bot's display name. Link to the bot's landing page if it has one, otherwise its repository.
+- **Bot Name** - The bot's display name. Link the name to the bot's landing page or website when one is known. If no website is known, leave the bot name as plain text and include the Top.gg profile in the parenthesized links as `[top.gg](top-gg-url)`.
 - **Description** - State what the bot does in plain language. Avoid marketing claims such as "best", "ultimate", or "only bot you need".
-- **Parenthesized links** - Add any subset of `[Invite]`, `[Source Code]`, `[Docs]`, and `[Support]`, in that order. Omit the parentheses entirely if none apply.
+- **Parenthesized links** - Add any subset of `[Invite]`, `[top.gg]`, `[Docs]`, `[GitHub]`, `[Support Server]`, and `[Privacy]`, in that order. Omit the parentheses entirely if none apply.
 - **License** - Use an SPDX identifier from [SPDX](https://spdx.org/licenses/), or `Proprietary` for closed-source bots.
 - **Language/Stack** - Use the primary language and framework when known, such as `Python/discord.py`, `Nodejs/discord.js`, `Rust/serenity`, or `Go/DiscordGo`. `Unknown` is acceptable for closed-source bots.
 - **Hosting model** - Use `Hosted`, `Self-hosted`, or `Both`.
+- **Prefix** - Add a backtick tag in the form `Prefix: value` when the public command prefix is known. Put it immediately after the hosting model and before descriptive tags. Use the exact value from the bot's public docs, Top.gg profile, or verified source; examples include `Prefix: /`, `Prefix: ! or /`, and `Prefix: custom`.
 
-Additional descriptive tags may be appended in backticks, such as `Slash Commands`, `Dashboard`, `Premium`, or a secondary category like `Utility`.
+Additional descriptive tags may be appended in backticks after the required metadata and prefix tag, such as `Slash Commands`, `Dashboard`, `Premium`, or a secondary category like `Utility`.
 
 ## Category Mapping
 
 Choose exactly one primary category. If a bot spans several areas, place it where a server owner would most likely look first and add secondary tags at the end of the entry.
+
+The README sections normalize Top.gg's broad categories and recurring bot-directory tags into one vocabulary. Do not add a new primary README section unless the category mapping is updated here too.
 
 - `Fun` - Entertainment, novelty, and casual engagement.
 - `Moderation` - Staff actions, automod, warnings, bans, and general moderation workflow.
@@ -86,23 +89,31 @@ Append these backtick tags when they add context beyond the core license and hos
 - `Broad Permissions` - Requires `Administrator` or unusually broad permissions to function.
 - `Inactive` - No release or commit in the last 12 months, or known to be EOL.
 - `Hosted Only` - No self-hosting option, even if source is published.
+- `AI Provider` - Sends user messages, member content, or server content to a third-party LLM or AI provider.
 
 ## Slash Commands
 
-Slash-command blocks are optional. Prefer linking to official docs unless a short command summary materially improves the entry.
+Slash-command blocks are optional. Prefer linking to official docs unless a short command summary materially improves the entry. Top.gg command data may be used when official docs are missing, but treat it as a public directory snapshot rather than a complete command reference.
 
 If included, place the block immediately below the entry:
 
 ```markdown
-- [Bot Name](primary-link) - Description. ([Docs](docs-url)) `License` `Stack` `Hosted`
-  <details><summary>Slash commands (N)</summary>
+- [Bot Name](website-url) - Description. ([Invite](invite-url), [top.gg](top-gg-url), [Docs](docs-url)) `License` `Stack` `Hosted` `Prefix: /` `Slash Commands`
+  <!--lint disable awesome-list-item-->
+  <details>
+  <summary>Slash commands (N)</summary>
 
-  **Sub-category**
+  Full source lists M commands; selected key commands below.
+
+  Sub-category:
+
   - `/command <required> [optional]` - Short description.
   - `/parent subcommand <arg>` - Short description.
 
   _Last verified: YYYY-MM-DD - [Full reference](docs-url)_
+
   </details>
+  <!--lint enable awesome-list-item-->
 ```
 
 Rules:
@@ -110,15 +121,17 @@ Rules:
 - List only key commands, capped at roughly 10-15.
 - Use `<arg>` for required options and `[arg]` for optional options.
 - Flatten subcommands into the slash path, such as `/giveaway start <duration> [winners]`.
-- Group commands under bold sub-category headings when the bot has more than about five listed commands.
+- Group commands under short sub-category labels when the bot has more than about five listed commands.
+- Keep descriptions short enough to scan quickly.
 - The `N` in the summary is the number of commands listed in the block.
-- End every block with a verification date and official reference link.
+- If the source exposes more commands than the README block lists, include a short "selected key commands" note so readers do not mistake the block for a full reference.
+- End every block with a verification date and a reference link. Prefer official docs; use the Top.gg profile only when it is the source of the command data.
 
 Rendering notes:
 
 1. Indent the `<details>` block two spaces so it stays inside the parent list item.
 2. Keep a blank line after `<summary>` and before `</details>`.
-3. If a markdown linter is added, allow-list the `details` and `summary` tags.
+3. Keep the local `awesome-list-item` lint disable/enable comments around command blocks. Markdown bullets render best for readers, but awesome-list linters otherwise treat nested command bullets as separate list entries.
 
 ## Sorting
 
@@ -140,7 +153,9 @@ Secondary indexes can be added once the list is large enough that category secti
 2. Entry follows the exact format, including spacing, punctuation, and field order.
 3. Section remains alphabetically sorted.
 4. Applicable anti-feature tags are present.
-5. Links are current and the bot is online and accepting invites, or the self-hosted bot builds and runs from a current commit.
-6. For permission-sensitive bots, broad permissions are documented or tagged.
+5. Bot-name links point to the bot website when available; otherwise the bot name is plain text and the Top.gg profile appears as `[top.gg]`.
+6. Links are current and the bot is online and accepting invites, or the self-hosted bot builds and runs from a current commit.
+7. Prefix metadata is present when a public prefix can be verified.
+8. For permission-sensitive bots, broad permissions are documented or tagged.
 
 One bot per pull request is preferred for first-time contributors. Bulk additions are fine for trusted maintainers.
