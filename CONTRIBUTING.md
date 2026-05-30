@@ -7,24 +7,25 @@ Thank you for helping improve this catalog. This is a curated list, not a scrape
 Each bot entry uses this shape:
 
 ```markdown
-- [Bot Name](website-url) - One- or two-sentence description of what it does. ([Invite](invite-url), [top.gg](top-gg-url), [Docs](docs-url), [GitHub](repo-url), [Support Server](support-server-invite), [Privacy](privacy-url)) `License` `Language/Stack` `Hosted|Self-hosted|Both` `Prefix: /`
+- [Bot Name](website-url) ![Slash Commands](assets/icons/slash-commands.svg) &middot; [Invite](invite-url) [![top.gg](assets/icons/topgg.svg)](top-gg-url) [![GitHub](assets/icons/github-light.svg#gh-light-mode-only)![GitHub](assets/icons/github-dark.svg#gh-dark-mode-only)](repo-url) [![Support Server](assets/icons/support.svg)](support-server-invite) [Privacy](privacy-url) &middot; One- or two-sentence description of what it does.
 ```
 
 Field rules:
 
-- **Bot Name** - The bot's display name. Link the name to the bot's landing page or website when one is known. If no website is known, leave the bot name as plain text and include the Top.gg profile in the parenthesized links as `[top.gg](top-gg-url)`.
+- **Bot Name** - The bot's display name. Link the name to the bot's landing page or website when one is known. If no website is known, leave the bot name as plain text and include the Top.gg profile in the action links as `[![top.gg](assets/icons/topgg.svg)](top-gg-url)`.
 - **Description** - State what the bot does in plain language. Avoid marketing claims such as "best", "ultimate", or "only bot you need".
-- **Parenthesized links** - Add any subset of `[Invite]`, `[top.gg]`, `[Docs]`, `[GitHub]`, `[Support Server]`, and `[Privacy]`, in that order. Omit the parentheses entirely if none apply.
-- **License** - Use an SPDX identifier from [SPDX](https://spdx.org/licenses/), or `Proprietary` for closed-source bots.
-- **Language/Stack** - Use the primary language and framework when known, such as `Python/discord.py`, `Nodejs/discord.js`, `Rust/serenity`, or `Go/DiscordGo`. `Unknown` is acceptable for closed-source bots.
-- **Hosting model** - Use `Hosted`, `Self-hosted`, or `Both`.
-- **Prefix** - Add a backtick tag in the form `Prefix: value` when the public command prefix is known. Put it immediately after the hosting model and before descriptive tags. Use the exact value from the bot's public docs, Top.gg profile, or verified source; examples include `Prefix: /`, `Prefix: ! or /`, and `Prefix: custom`.
+- **Action links** - Add any subset of `[Invite]`, `[![top.gg](assets/icons/topgg.svg)]`, `[![GitHub](assets/icons/github-light.svg#gh-light-mode-only)![GitHub](assets/icons/github-dark.svg#gh-dark-mode-only)]`, `[![Support Server](assets/icons/support.svg)]`, and `[Privacy]`, in that order, immediately after the bot name and optional slash-command badge. Separate links with one space, then use `&middot;` before the description.
+- **Top.gg icon link** - Use the local `assets/icons/topgg.svg` asset with `top.gg` alt text. Do not hotlink Top.gg favicons or other third-party brand assets.
+- **GitHub icon link** - Use both local theme variants inside the same link: `assets/icons/github-light.svg#gh-light-mode-only` and `assets/icons/github-dark.svg#gh-dark-mode-only`, each with `GitHub` alt text. Keep `assets/icons/github.svg` as the non-themed fallback asset.
+- **Support server icon link** - Use the local `assets/icons/support.svg` asset with `Support Server` alt text for Discord support server invites.
+- **Slash-command badge** - Add `![Slash Commands](assets/icons/slash-commands.svg) &middot;` immediately after the bot name and before the action links only when slash-command support is verified. Good signals include a non-empty Top.gg command list, an invite URL with the `applications.commands` scope, or public docs text that explicitly mentions slash commands. Do not add a negative "no slash commands" badge when support is unknown.
+- **No slash-command badge** - When slash-command support is not verified, add `&middot;` directly between the bot name and the action links.
 
-Additional descriptive tags may be appended in backticks after the required metadata and prefix tag, such as `Slash Commands`, `Dashboard`, `Premium`, or a secondary category like `Utility`.
+Do not append category tags after the description. The section heading is the bot's category. Reserve the optional anti-feature tags below for exceptional cases where they add useful context.
 
 ## Category Mapping
 
-Choose exactly one primary category. If a bot spans several areas, place it where a server owner would most likely look first and add secondary tags at the end of the entry.
+Choose exactly one primary category. If a bot spans several areas, place it where a server owner would most likely look first.
 
 The README sections normalize Top.gg's broad categories and recurring bot-directory tags into one vocabulary. Do not add a new primary README section unless the category mapping is updated here too.
 
@@ -81,7 +82,7 @@ Avoid entries that are:
 
 ## Anti-Feature Tags
 
-Append these backtick tags when they add context beyond the core license and hosting fields:
+Append these backtick tags only when they add meaningful context:
 
 - `Closed Source` - No public source repository.
 - `Premium` - Core advertised features are gated behind a paid tier.
@@ -98,7 +99,7 @@ Slash-command blocks are optional. Prefer linking to official docs unless a shor
 If included, place the block immediately below the entry:
 
 ```markdown
-- [Bot Name](website-url) - Description. ([Invite](invite-url), [top.gg](top-gg-url), [Docs](docs-url)) `License` `Stack` `Hosted` `Prefix: /` `Slash Commands`
+- [Bot Name](website-url) ![Slash Commands](assets/icons/slash-commands.svg) &middot; [Invite](invite-url) [![top.gg](assets/icons/topgg.svg)](top-gg-url) &middot; Description.
   <!--lint disable awesome-list-item-->
   <details>
   <summary>Slash commands (N)</summary>
@@ -135,7 +136,7 @@ Rendering notes:
 
 ## Sorting
 
-Sort entries alphabetically within each category by bot name. Do not duplicate a bot across categories; use secondary tags instead.
+Sort entries alphabetically within each category by bot name. Do not duplicate a bot across categories; place it in the most appropriate section.
 
 ## Cross-Cutting Indexes
 
@@ -153,9 +154,9 @@ Secondary indexes can be added once the list is large enough that category secti
 2. Entry follows the exact format, including spacing, punctuation, and field order.
 3. Section remains alphabetically sorted.
 4. Applicable anti-feature tags are present.
-5. Bot-name links point to the bot website when available; otherwise the bot name is plain text and the Top.gg profile appears as `[top.gg]`.
+5. Bot-name links point to the bot website when available; otherwise the bot name is plain text and the Top.gg profile appears as the local Top.gg icon link.
 6. Links are current and the bot is online and accepting invites, or the self-hosted bot builds and runs from a current commit.
-7. Prefix metadata is present when a public prefix can be verified.
+7. Slash-command badges are present only when a positive support signal is verified.
 8. For permission-sensitive bots, broad permissions are documented or tagged.
 
 One bot per pull request is preferred for first-time contributors. Bulk additions are fine for trusted maintainers.
